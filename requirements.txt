@@ -1,0 +1,71 @@
+# AETHER-MINE: Distributed Intelligence & Adversarial Web Mining Engine
+# Core Dependencies
+
+# Web Framework & API
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Task Queue & Message Broker
+celery[redis]>=5.3.0
+redis>=5.0.0
+kombu>=5.3.0
+
+# HTTP Clients & Browser Automation
+httpx>=0.26.0
+curl-cffi>=0.6.0
+playwright>=1.41.0
+aiohttp>=3.9.0
+
+# Data Storage & Processing
+pyarrow>=15.0.0
+duckdb>=0.9.0
+polars>=0.20.0
+pandas>=2.2.0
+
+# Document Processing
+pymupdf>=1.23.0
+pdfplumber>=0.10.0
+python-docx>=1.1.0
+openpyxl>=3.1.0
+
+# Image & Metadata Processing
+pillow>=10.2.0
+exifread>=3.0.0
+
+# Vector Database & Embeddings
+chromadb>=0.4.0
+sentence-transformers>=2.3.0
+
+# LLM Integration
+openai>=1.10.0
+ollama>=0.1.0
+
+# Cloud SDKs
+boto3>=1.34.0
+azure-storage-blob>=12.19.0
+google-cloud-storage>=2.14.0
+
+# Security & Hashing
+cryptography>=42.0.0
+hashlib-compat>=1.0.0
+
+# Utilities
+structlog>=24.1.0
+tenacity>=8.2.0
+python-dotenv>=1.0.0
+orjson>=3.9.0
+rich>=13.7.0
+click>=8.1.0
+tqdm>=4.66.0
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+httpx-mock>=0.28.0
+
+# Type Checking
+mypy>=1.8.0
+types-redis>=4.6.0
