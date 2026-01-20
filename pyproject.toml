@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aether-mine"
+version = "1.0.0"
+description = "Distributed Intelligence & Adversarial Web Mining Engine"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "AETHER-MINE Team"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "celery[redis]>=5.3.0",
+    "redis>=5.0.0",
+    "httpx>=0.26.0",
+    "curl-cffi>=0.6.0",
+    "playwright>=1.41.0",
+    "pyarrow>=15.0.0",
+    "duckdb>=0.9.0",
+    "polars>=0.20.0",
+    "pymupdf>=1.23.0",
+    "chromadb>=0.4.0",
+    "structlog>=24.1.0",
+    "tenacity>=8.2.0",
+    "orjson>=3.9.0",
+    "rich>=13.7.0",
+    "boto3>=1.34.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "mypy>=1.8.0",
+    "ruff>=0.2.0",
+]
+
+[project.scripts]
+aether-mine = "src.core.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
