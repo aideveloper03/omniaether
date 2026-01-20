@@ -1,0 +1,7 @@
+pydantic>=2
+fastapi>=0.110
+uvicorn[standard]>=0.27
+celery>=5.3
+redis>=5.0
+duckdb>=0.10
+pyarrow>=14.0
